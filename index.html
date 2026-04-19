@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美团外卖柜 | 智能无接触取餐解决方案 | 扫码取餐安全便捷</title>
+  <meta name="description" content="美团外卖柜提供智能无接触取餐解决方案，支持扫码取餐、保温消毒、24小时自助服务。适用于写字楼、医院、酒店、产业园等场景，提升配送效率，保障食品安全。">
+  <meta name="keywords" content="美团外卖柜,智能取餐柜,无接触配送,外卖柜,扫码取餐,保温消毒,智能餐饮,写字楼外卖柜,医院外卖柜">
+  <meta name="author" content="美团">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / 社交分享 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="美团外卖柜 | 智能无接触取餐解决方案">
+  <meta property="og:description" content="美团外卖柜提供智能无接触取餐解决方案，支持扫码取餐、保温消毒、24小时自助服务。适用于写字楼、医院、酒店等场景。">
+  <meta property="og:image" content="https://conversation.cdn.meoo.host/images/og-image.jpg">
+  <meta property="og:url" content="https://meituan-locker.meoo.host">
+  <meta property="og:site_name" content="美团外卖柜">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="美团外卖柜 | 智能无接触取餐解决方案">
+  <meta name="twitter:description" content="美团外卖柜提供智能无接触取餐解决方案，支持扫码取餐、保温消毒、24小时自助服务。">
+  <meta name="twitter:image" content="https://conversation.cdn.meoo.host/images/og-image.jpg">
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "美团外卖柜",
+    "description": "智能无接触取餐解决方案提供商",
+    "url": "https://meituan-locker.meoo.host",
+    "logo": "https://conversation.cdn.meoo.host/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+86-18476637396",
+      "contactType": "customer service",
+      "availableLanguage": "Chinese"
+    },
+    "sameAs": [
+      "https://www.meituan.com"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* 内联样式确保主题色立即生效，避免闪烁 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    html.light, html.light body {
+      background-color: #ffffff !important;
+      color: #000000;
+    }
+    html.dark, html.dark body {
+      background-color: #1a1a1a !important;
+      color: #ffffff;
+    }
+  </style>
+  <script>
+    // 在 React 加载前立即设置主题，避免闪烁
+    (function() {
+      const isInIframe = window.self !== window.top;
+
+      function applyThemeToDOM(theme) {
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+
+      if (isInIframe) {
+        // 监听父窗口主动推送的主题消息
+        window.addEventListener('message', function(event) {
+          if (event.data && typeof event.data.theme === 'string') {
+            const theme = event.data.theme;
+            if (theme === 'light' || theme === 'dark') {
+              applyThemeToDOM(theme);
+            }
+          }
+        });
+      } else {
+        // 非 iframe 环境，使用默认 light 主题
+        applyThemeToDOM('light');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
